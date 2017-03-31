@@ -15,6 +15,7 @@ this script will run dN/dS analysis on `codon.phy` and the corresponding tree `t
 ```
 sudo docker bild -t selection_docker . 
 sudo docker run -i -v /home/pmuench/github.com/philippmuench/codeml_docker:/data -t --entrypoint /bin/bash selection_docker
+cd data/
 ./codeml_example.sh
 ```
 
