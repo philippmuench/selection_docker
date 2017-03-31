@@ -1,8 +1,0 @@
-
-------------------
-FastCodeML V1.1.0
-------------------
-
-This is a rooted tree. Please check!
-
-Doing branch 0
