@@ -1,0 +1,3 @@
+* Zero base frequencies are currently not working if observed in the data; CodonFreq = 0 always works, even when some codons have a zero frequency.
+* dsyevr() should be called twice to determine best workspace (NOT a bug, but not very clean)
+* A few times, we used fixed array sizes of 61, e.g. TMP[61], although in some cases this might be smaller

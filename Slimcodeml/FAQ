@@ -1,0 +1,27 @@
+1) Is SlimCodeML a purely sequential code or can it run in parallel?
+The code is purely sequential, however, linking it against a multithreaded BLAS and LAPACK should work. Notice that due to very small matrices, the gain in performance might not be overwhelming.
+
+2) Do I really need BLAS and LAPACK?
+Yes, although you can also take a library inluding BLAS+LAPACK functionality, e.g., ACML
+
+3) Do I really need CMake?
+No, you can still compile and link "by hand"
+
+4) Can I fix the seed for the random number generator?
+Yes, look for the following lines in codeml.cpp
++++
+    seed = 12346789;
+    seed = 4 * (int) time(NULL) + 1;
+//    seed = 840863437;           //CHHS This is a fixed (useful) seed for testing output
+    printf ("seed is %d\n",seed);
++++
+Outcomment line 3 and set the seed to your desired vaue.
+
+5) Which BLAS / LAPACK library do you recommend?
+On many HPC systems, these libraries are available in optimized versions, so go with these. We recommend OpenBLAS or ATLAS (both free) and the latest stable LAPACK or Intel MKL (not free). If you are not interested in runtimes but just want to check if it works, take libblas.a and liblapack.a from precompiled packages. In Ubuntu these packages are called libblas-dev and liblapack-dev.
+
+6) So does SlimCodeML still support other evolutionary models than the branch-site model?
+Probably not, we focus only on the branch-site model and removed some code not necessary for the branch-site model.
+
+7) Is there any manual?
+Please confer the PAML manual

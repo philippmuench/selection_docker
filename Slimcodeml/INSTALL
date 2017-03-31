@@ -1,0 +1,16 @@
+Requirements to generate the executable:
+* C++ compiler, e.g. GCC 4
+* CMake 2.6 or later recommended, although compilation possible without
+* Reasonably new BLAS implementation (e.g. OpenBLAS, Goto2, ACML, MKL); packages from various Linux distributions can be used, but this deteriorates performance (i.e., might even be slower than original CodeML)
+* Reasonably new LAPACK library (e.g. original LAPACK or ACML, MKL); packages from various Linux distributions can be used, but this deteriorates performance (i.e., might even be slower than original CodeML)
+
+How to generate the executable:
+* Generate BLAS if necessary
+* Generate LAPACK if necessary
+* Edit CMakeLists.txt if necessary
+* "cmake ." in source directory creates a Makefile
+* make will create an executable "slimcodeml"
+
+Computer system:
+* Linux prefered, but sources are portable to other platforms
+

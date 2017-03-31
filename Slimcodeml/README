@@ -1,0 +1,16 @@
+SlimCodeML is an improved version of CodeML 4.4c for the branch site model, coding done by Hannes Schabauer and Mario Valle for the HP2C Selectome project, see http://www.hp2c.ch/projects/selectome/.
+
+IMPORTANT: SlimCodeML works for the branch-site model, other evolutionary models of CodeML are unsupported (and not improved). Use CodeML for other models.
+
+Please cite our paper, if you use SlimCodeML for a publication: "SlimCodeML: An Optimized Version of CodeML for the Branch-Site Model" (see http://dx.doi.org/10.1109/IPDPSW.2012.88)
+
+What's new compared to CodeML:
+* Various small fixes and improvements
+* Exponentiation improved, requires BLAS and LAPACK
+* Code generation uses CMake
+
+How to run:
+./slimcodeml <CTL file>
+
+Contact:
+<Hannes Schabauer> hannes.schabauer@unil.ch

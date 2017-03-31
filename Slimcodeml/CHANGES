@@ -1,0 +1,21 @@
+Changes for SlimCodeML version 2013-January-09
+* C sources translated into C++ (only small changes necessary)
+* Removed some code not necessary for the branch-site model
+* Proper indentation by using GNU indent (GNU style)
+* Fixed many warnings
+* Cleaned sources to allow compilation with various compilers
+* Source structure improved (see below for details), each .cpp file can be compiled separately
+** Definitions collected into defines.h
+** Global variables collected into global.cpp and global.h
+** Function signatures collected into functions.h
+** Inlined functions collected into inline.h
+** BLAS signatures collected into blas.h
+** LAPACK signatures collected into lapack.h
+* Matrix exponentiation has been improved (see published paper for details)
+
+Changes for SlimCodeML version 2013-February-07
+* Fixed a bug in codeml.cpp, where the size of array fhk was 3 instead of 4; this bug is also present in CodeML until version 4.6 (4.7 fixes it). This bug affects site probabilities when computing BEB only.
+* Small modifications in CMakeLists.txt
+
+Changes for SlimCodeML version 2014-February-11
+* Fixed version string. Removed testing version warning.

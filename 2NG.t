@@ -1,0 +1,9 @@
+     8
+normal_MH0058|normal_MH0058.peg.10458 
+normal_MH0058|normal_MH0058.peg.10459   6.2141
+normal_MH0048|normal_MH0048.peg.5129   5.3641  3.2000
+normal_MH0027|normal_MH0027.peg.1804   5.6021  4.2400  3.6152
+normal_MH0048|normal_MH0048.peg.6479   6.0913  4.2243  4.1972  3.0257
+normal_MH0027|normal_MH0027.peg.256   6.5223  6.7643  6.8005  5.2806  4.6842
+normal_MH0048|normal_MH0048.peg.5652   6.1750  4.3111  4.5579  4.1965  3.6570  5.8109
+normal_MH0058|normal_MH0058.peg.3815   6.7234  4.4916  3.5304  4.0314  4.3094  6.7304  2.8831

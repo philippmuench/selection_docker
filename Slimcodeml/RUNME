@@ -1,0 +1,5 @@
+#!/bin/bash
+# SlimCodeML syntax matches CodeML
+./slimcodeml ./ENSGT00550000073950.Euteleostomi.07.001.ctl
+./slimcodeml ./ENSGT00550000073950.Euteleostomi.07.001.fx.ctl
+
