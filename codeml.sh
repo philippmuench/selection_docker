@@ -18,13 +18,12 @@ for codon_file in codon/*.msa.*; do
   sed -i "3s|.*|outfile = $output_file * main result file name|" codeml.ctl
   codeml codeml.ctl > /dev/null 2> /dev/null
   dnds_codeml=$(grep "omega (dN/dS) = " $output_file | awk '{print $4}')
-
+  # sum up over all branches in tree
   dN=$(cat $output_file |\
     sed -n -e '/dN & dS for each branch/,/tree length for dN/ p' \
     | sed 1,4d \
     | head -n -2 \
     | awk '{ SUM += $6} END { print SUM }')
-
   dS=$(cat $output_file |\
     sed -n -e '/dN & dS for each branch/,/tree length for dN/ p' \
     | sed 1,4d \
