@@ -18,13 +18,23 @@ for each run a config file have to be provided, see 'codeml.ctl'(for codeml) and
 
 this script will run dN/dS analysis on `codon.phy` and the corresponding tree `tree.phy` and output the dN/dS
 
-##### run the scripts
+##### run the scripts (build image local)
 ```
 sudo docker run hello-world # test if docker is installed
 git clone https://github.com/hzi-bifo/selection_docker.git #clone
 cd selection_docker 
 sudo docker build -t selection_docker . # Should be finished after 3-5 minutes with [...] Successfully built ...
 sudo docker run -i -v /absolute_path/to/selection_docker/folder:/data -t --entrypoint /bin/bash selection_docker # enter the docker image
+cd data/ 
+./codeml_example.sh
+```
+
+##### run the scripts (use image from docker.io)
+```
+sudo docker run hello-world # test if docker is installed
+git clone https://github.com/hzi-bifo/selection_docker.git #clone
+cd selection_docker 
+sudo docker run -i -v /absolute_path/to/selection_docker/folder:/data -t --entrypoint /bin/bash philippmuench/selection_docker # enter the docker image
 cd data/ 
 ./codeml_example.sh
 ```
